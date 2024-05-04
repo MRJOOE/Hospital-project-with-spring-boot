@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "5fffcd33-6554-41ea-92af-742660245447",
+		"name": "Hospital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27147909"
+	},
+	"item": [
+		{
+			"name": "Get My Patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/my-patients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"my-patients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pending Doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/pendingdoctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pendingdoctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/patient/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Prescription",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/prescription/1/252",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prescription",
+						"1",
+						"252"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/patient/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patient",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/patient/1/402",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patient",
+						"1",
+						"402"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Prescription",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/prescription/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prescription",
+						"8"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decline Doctor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/doctors/252",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"doctors",
+						"252"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"address\": \"madrid\",\r\n        \"password\": \"5\",\r\n        \"lastName\": \"modric\",\r\n        \"specialization\": \"goat\",\r\n        \"age\": 10,\r\n        \"firstName\": \"loka\",\r\n        \"email\": \"loka@gmail.com\",\r\n        \"mobile\": 888\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"firstName\": \"dddd\",\r\n    \"lastName\": \"dddd\",\r\n    \"gender\": \"female\",\r\n    \"mobile\": 23212,\r\n    \"address\": \"222\",\r\n    \"dateOfArrival\": \"2023-05-01T22:00:00.000+00:00\",\r\n    \"cost\": 22,\r\n    \"date_of_Birth\": \"2023-05-02T22:00:00.000+00:00\",\r\n    \"nid\": 12345678912347,\r\n    \"medical_History\": \"gggggggggggg\",\r\n    \"mediacl_Disease\": \"gggggg\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/patient/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Prescription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"date\": \"2023-04-04T22:00:00.000+00:00\",\r\n        \"medicineName\": \"22222\",\r\n        \"patientID\": 1,\r\n        \"doctorID\": 1,\r\n        \"doses\": \"22\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/prescription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prescription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n   \"firstName\": \"dddd\",\r\n    \"lastName\": \"dddd\",\r\n    \"gender\": \"female\",\r\n    \"mobile\": 23212,\r\n    \"address\": \"222\",\r\n    \"dateOfArrival\": \"2023-05-01T22:00:00.000+00:00\",\r\n    \"cost\": 22,\r\n    \"date_of_Birth\": \"2023-05-02T22:00:00.000+00:00\",\r\n    \"nid\": 2078,\r\n    \"medical_History\": \"yyyyyyy\",\r\n    \"mediacl_Disease\": \"aaa\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Doctor To Patient",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 7,\r\n    \"firstName\": \"mariam\",\r\n    \"lastName\": \"sssssss\",\r\n    \"age\": 20,\r\n    \"gender\": \"female\",\r\n    \"mobile\": 1234567890,\r\n    \"address\": \"\",\r\n    \"dateOfArrival\": \"2023-04-05T22:00:00.000+00:00\",\r\n    \"cost\": 100,\r\n    \"medical_History\": \"2355555555555121\",\r\n    \"mediacl_Disease\": \"1111\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/patient/1/assignto/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patient",
+						"1",
+						"assignto",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Prescription",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \r\n        \"id\": 4,\r\n        \"date\": \"2023-04-04T22:00:00.000+00:00\",\r\n        \"medicineName\": \"66666666\",\r\n        \"patientID\": 7,\r\n        \"doctorID\": 1,\r\n        \"doses\": \"22\"\r\n    \r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/prescription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"prescription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Doctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/pending/302",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pending",
+						"302"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"Password\": \"5\",\r\n        \"Email\": \"luka@gmail.com\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
